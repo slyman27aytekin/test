@@ -1,0 +1,36 @@
+---
+title: "Vize Rapor: Süleyman Aytekin 180401069"
+output:
+  html_document:
+    df_print: paged
+---
+
+# 1 : Paketin ismi
+Kütüphane sulo ile adlandırılmıştır. ve bir veri okuma duzeltme grafikleştirme kütüphanesidir. 
+
+# 2 : Kütüphaneyi çağırma ve fonksiyonlar
+Kütüphane(Paket) library(sulo) komutuyla çağırılır içindeki fonksiyonları ise sırasıyla hello(read) düzelt(ham veri işleme) grafik(veriyi grafikleştirme) olarak 3 adet fonksiyonumuz bulunmaktadır.
+
+# 3 : Bir veri setiyle örneklendirme - [sulo::hello(dosya)]
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(sulo)
+dosya <- "ufc-fighters-statistics.csv"
+
+sulo::hello(dosya)
+```
+Görüldüğü üzere bütün sutünlarımız geliyor. Kullanılardan bir sutün seçmesini bekliyor ve sonrasında seçilen sutünun içeriğini getiriyor.
+
+# 4 : Veri setinindeki ham veriyi düzeltme işleme - [sulo::duzelt(dosya)]
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+
+sulo::duzelt(dosya)
+
+```
+
+# 5 Veri setini Görselleştirme ve Kolerasyon KPI alma - [sulo::grafik(dosya)]
+
+Örnek grafik için  3. ve 4. sutünü seçiceğiz
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+sulo::grafik(dosya)
+```
+Sonucunda görüldüğü üzere grafik fonksiyonumuz. Hem verilerin grafiğini çıkartmış olup Hemde KPI değerlerini hesaplamıştır.
